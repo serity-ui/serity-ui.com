@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "prettier --write \"pages/*.{tsx,ts}\""
+    "prettier": "prettier --write \"pages/docs/*.{tsx,ts}\""
   },
   "dependencies": {
     "@types/node": "18.11.9",
