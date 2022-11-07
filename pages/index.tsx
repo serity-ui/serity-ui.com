@@ -23,8 +23,8 @@ export default function Home() {
               <li className='text-white text-xl'>
                 <Image
                   className='text-white'
-                  src={Logo}
                   alt='Serity UI logo'
+                  src={Logo}
                   width={26}
                   height={26}
                 />
