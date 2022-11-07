@@ -51,7 +51,7 @@ const Sidebar = () => {
     },
   ]
   return (
-    <aside className='h-screen bg-slate-900 p-5 pt-8 w-72 lg:text-sm lg:w-72 lg:flex-shrink-0'>
+    <aside className='hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-auto'>
       <div className='flex justify-center mb-10'>
         <Link href='/'>
           <Image
