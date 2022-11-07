@@ -1,5 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import BlockCodeUsage from '../../components/blockcodes/Usage'
+import BlockCodeInstallation from '../../components/blockcodes/Installation'
 
 const installation = () => {
   return (
@@ -25,11 +27,7 @@ const installation = () => {
             terminal:
           </p>
         </div>
-        <div className='bg-[#1E293B] px-6 py-6  rounded-lg'>
-          <pre>
-            <code>npm install @serity-ui/react</code>
-          </pre>
-        </div>
+        <BlockCodeInstallation />
         <div>
           <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3 mt-10'>
             Usage
@@ -38,23 +36,16 @@ const installation = () => {
         <div className='relative z-10 max-w-3xl mb-6'>
           <p className='text-slate-400'>
             After installing Serity UI, you can start importing the components
-            you want to use in your React project.
+            you want to use in your React project. In this example we are going
+            to use the <code className='text-purple-300'>Tooltip</code>{' '}
+            component.
           </p>
         </div>
-        <div className='bg-[#1E293B] px-6 py-6  rounded-lg'>
-          <div>
-            <div>
-              <pre>
-                <div className='text-[#d6deeb]'>
-                  <span className='text-teal-400'>import</span>
-                  <span> &#123; Tooltip &#125; </span>
-                  <span className='text-teal-400'>from</span>
-                  <span className='text-lime-500'> '@serity-ui/react'</span>
-                </div>
-              </pre>
-            </div>
-          </div>
-          <button></button>
+        <BlockCodeUsage />
+        <div>
+          <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3 mt-10'>
+            Demo
+          </h2>
         </div>
       </section>
     </Layout>
