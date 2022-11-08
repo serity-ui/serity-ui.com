@@ -25,11 +25,8 @@ const Sidebar = () => {
       title: 'Core Concepts',
       submenu: true,
       submenuItems: [
-        { title: 'Utility-First Fundamentals', href: '/docs/utility-first' },
-        {
-          title: 'Handling Hover, Focus, and Other States',
-          href: '/docs/hover-focus-and-other-states',
-        },
+        { title: 'Style Props', href: '/docs/utility-first' },
+        { title: 'Color Mode', href: '/docs/utility-first' },
         {
           title: 'Responsive Design',
           href: '/docs/responsive-design',
@@ -37,16 +34,13 @@ const Sidebar = () => {
       ],
     },
     {
-      title: 'Customization',
+      title: 'Components',
       spacing: true,
       submenu: true,
       submenuItems: [
-        { title: 'Configuration', href: '/docs/configuration' },
-        { title: 'Content', href: '/docs/content-configuration' },
-        {
-          title: 'Theme',
-          href: '/docs/theme',
-        },
+        { title: 'Avatar', href: '/docs/components/avatar' },
+        { title: 'Image', href: '/docs/components/image' },
+        { title: 'Tooltip', href: '/docs/components/tooltip' },
       ],
     },
   ]
