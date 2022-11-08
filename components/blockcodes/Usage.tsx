@@ -2,7 +2,7 @@ import React from 'react'
 
 const Usage = () => {
   return (
-    <div className='bg-[#1E293B] px-6 py-6  rounded-lg'>
+    <div className='bg-[#1E293B] px-6 py-6  rounded-lg overflow-x-auto'>
       <div>
         <div>
           <pre>

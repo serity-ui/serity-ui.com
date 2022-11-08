@@ -7,7 +7,7 @@ const Layout = ({ children }: any) => {
       <div className='max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8'>
         <Sidebar />
         <div className='lg:pl-[19.5rem] '>
-          <main className='max-w-3xl mx-auto relative z-20 flex flex-col overflow-hidden px-12 py-10  xl:max-w-none text-white'>
+          <main className='max-w-3xl mx-auto relative z-20 flex flex-col overflow-hidden py-10 xl:max-w-none text-white'>
             {children}
           </main>
           <footer className='text-sm leading-6 mt-16'>
