@@ -1,11 +1,15 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Logo from '../public/logo.svg'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsMoonFill } from 'react-icons/bs'
 import Link from 'next/link'
+import { HiDotsVertical } from 'react-icons/hi'
 
 export default function Home() {
+  const [open, setOpen] = useState(false)
+
   return (
     <div>
       <Head>
@@ -17,49 +21,61 @@ export default function Home() {
         <link rel='icon' href='/logo.svg' />
       </Head>
       <main className='h-screen pt-6 after:bg-white/[0.15] bg-gradient-to-r from-blue-700 via-blue-800 to-blue-600'>
-        <nav className='h-16 w-11/12 mx-auto rounded-lg bg-white/[0.15] '>
-          <ul className='flex items-center justify-between  h-full px-7'>
-            <div className='flex'>
-              <li className='text-white text-xl'>
-                <Image
-                  className='text-white'
-                  alt='Serity UI logo'
-                  src={Logo}
-                  width={26}
-                  height={26}
-                />
-              </li>
-            </div>
-            <div className='flex gap-7'>
-              <Link
-                className='text-white hover:text-[rgba(56,189,248,1)]'
-                href='/docs/installation/'
-              >
-                Docs
-              </Link>
-              <Link
-                className='text-white hover:text-[rgba(56,189,248,1)]'
-                href='https://github.com/edman-cota/serity-ui.com'
-              >
-                Components
-              </Link>
-              <div className='w-[1px] h-6 bg-slate-300'></div>
-              <Link
-                className='text-white flex items-center'
-                href='https://github.com/edman-cota/serity-ui.com'
-              >
-                <BsMoonFill />
-              </Link>
-              <Link
-                className='text-white flex items-center'
-                target='_blank'
-                href='https://github.com/edman-cota/serity-ui.com'
-              >
-                <AiFillGithub />
-              </Link>
-            </div>
-          </ul>
-        </nav>
+        <header className='h-16 w-11/12 mx-auto rounded-lg bg-white/[0.15]'>
+          <div className='flex items-center justify-between h-full px-7 flex-wrap w-full'>
+            <Image
+              className='text-white'
+              alt='Serity UI logo'
+              src={Logo}
+              width={26}
+              height={26}
+            />
+
+            <HiDotsVertical
+              className='lg:hidden block h-5 w-5 cursor-pointer text-white'
+              onClick={() => setOpen(!open)}
+            />
+
+            <nav className={`${open ? 'block' : 'hidden'} lg:block`}>
+              <ul className='lg:flex lg:gap-7'>
+                <li>
+                  <Link
+                    className='text-white block hover:text-[rgba(56,189,248,1)]'
+                    href='/docs/installation/'
+                  >
+                    Docs
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className='text-white block hover:text-[rgba(56,189,248,1)]'
+                    href='https://github.com/edman-cota/serity-ui.com'
+                  >
+                    Components
+                  </Link>
+                </li>
+                <div className='w-[1px] h-6 bg-slate-300'></div>
+                <li>
+                  <Link
+                    className='text-white flex items-center'
+                    href='https://github.com/edman-cota/serity-ui.com'
+                  >
+                    <BsMoonFill />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    className='text-white flex items-center'
+                    target='_blank'
+                    href='https://github.com/edman-cota/serity-ui.com'
+                  >
+                    <AiFillGithub />
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </header>
         <div className='flex flex-col w-11/12 h-[calc(100vh_-_90px)] mx-auto lg:flex-row'>
           <div className='flex flex-col w-full py-12 justify-center lg:w-[45%]'>
             <h1 className='text-white text-3xl font-bold text-center md:text-5xl lg:text-left lg:mb-5 '>
