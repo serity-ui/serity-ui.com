@@ -3,7 +3,7 @@ import Sidebar from './Sidebar'
 
 const Layout = ({ children }: any) => {
   return (
-    <div className='overflow-hidden bg-slate-900 '>
+    <div className='overflow-hidden bg-slate-900'>
       <div className='max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8'>
         <Sidebar />
         <div className='lg:pl-[19.5rem] '>
