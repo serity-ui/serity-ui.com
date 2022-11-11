@@ -6,7 +6,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'fira-code': ['Fira Code'],
+    },
   },
   plugins: [],
 }

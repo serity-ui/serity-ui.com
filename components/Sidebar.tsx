@@ -15,24 +15,20 @@ const Sidebar = () => {
       submenuItems: [
         { title: 'Installation', href: '/docs/installation' },
         { title: 'Editor Setup', href: '/docs/editor-setup' },
-        {
-          title: 'Using with Preprocessors',
-          href: '/docs/using-with-preprocessors',
-        },
       ],
     },
-    {
-      title: 'Core Concepts',
-      submenu: true,
-      submenuItems: [
-        { title: 'Style Props', href: '/docs/utility-first' },
-        { title: 'Color Mode', href: '/docs/utility-first' },
-        {
-          title: 'Responsive Design',
-          href: '/docs/responsive-design',
-        },
-      ],
-    },
+    // {
+    //   title: 'Core Concepts',
+    //   submenu: true,
+    //   submenuItems: [
+    //     { title: 'Style Props', href: '/docs/utility-first' },
+    //     { title: 'Color Mode', href: '/docs/utility-first' },
+    //     {
+    //       title: 'Responsive Design',
+    //       href: '/docs/responsive-design',
+    //     },
+    //   ],
+    // },
     {
       title: 'Components',
       spacing: true,
@@ -40,6 +36,9 @@ const Sidebar = () => {
       submenuItems: [
         { title: 'Avatar', href: '/docs/components/avatar' },
         { title: 'Image', href: '/docs/components/image' },
+        { title: 'Select', href: '/docs/components/select' },
+        { title: 'Slider', href: '/docs/components/slider' },
+        { title: 'Switch', href: '/docs/components/switch' },
         { title: 'Tooltip', href: '/docs/components/tooltip' },
       ],
     },
