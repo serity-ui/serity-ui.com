@@ -1,10 +1,10 @@
 import React from 'react'
-import Import from '../../../components/blockcodes/Import'
-import Tooltip from '../../../components/blockcodes/Tooltip'
+import Import from '../../../components/blockcodes/ImportBlockCode'
+import TooltipBlockCode from '../../../components/blockcodes/tooltip/TooltipBlockCode'
+import TooltipSingleDemo from '../../../components/blockcodes/tooltip/TooltipSingleDemo'
 import Demo from '../../../components/Demo'
 import Header from '../../../components/Header'
 import Layout from '../../../components/Layout'
-import WorkInProgress from '../../../components/WorkInProgress'
 
 const tooltip = () => {
   return (
@@ -31,17 +31,31 @@ const tooltip = () => {
           </h2>
           <br />
           <h3 className='text-slate-200 text-lg tracking-tight font-bold mb-3'>
-            Tooltip with command options
+            Tooltip with command props
           </h3>
         </div>
-        <Tooltip label={"I'm a tooltip"} command='Ctrl + B' />
+        <TooltipSingleDemo type='button' />
+        <TooltipBlockCode
+          type='button'
+          label={'Hey, I am a tooltip'}
+          command='Ctrl + B'
+        />
         <br />
         <br />
-        {/* <div>
+        <div>
+          <h3 className='text-slate-200 text-lg tracking-tight font-bold mb-3'>
+            With an icon
+          </h3>
+        </div>
+        <TooltipSingleDemo type='icon' />
+        <TooltipBlockCode type='icon' label={'Hey, I am a tooltip'} />
+        <br />
+        <br />
+        <div>
           <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3'>
             Placement
           </h2>
-        </div> */}
+        </div>
       </section>
     </Layout>
   )
