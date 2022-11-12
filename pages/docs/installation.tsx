@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import BlockCodeUsage from '../../components/blockcodes/Usage'
-import BlockCodeInstallation from '../../components/blockcodes/Installation'
+import UsageBlockCode from '../../components/blockcodes/UsageBlockCode'
+import InstallationBlockCode from '../../components/blockcodes/InstallationBlockCode'
 import Link from 'next/link'
 
 const installation = () => {
@@ -28,7 +28,7 @@ const installation = () => {
             terminal:
           </p>
         </div>
-        <BlockCodeInstallation />
+        <InstallationBlockCode />
         <div>
           <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3 mt-10'>
             Usage
@@ -42,7 +42,7 @@ const installation = () => {
             component.
           </p>
         </div>
-        <BlockCodeUsage />
+        <UsageBlockCode />
       </section>
       <section className='relative'>
         <div>
