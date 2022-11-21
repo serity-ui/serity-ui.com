@@ -1,14 +1,19 @@
 import React from 'react'
-import { Tooltip } from '@serity-ui/react'
+import Select, { SelectItem } from '../Select/Select'
 
-const Demo = () => {
+const SelectDemo = () => {
   return (
     <div className='relative flex justify-center py-24 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500'>
-      {/* <Tooltip label="I'm a tooltip" placement='top'> */}
-      <button className='bg-white shadow-sm rounded-md text-[#5746AF] h-[35px] w-[100px]'>
-        Hover me
-      </button>
-      {/* </Tooltip> */}
+      <Select>
+        <Select.Trigger placeholder='Select a fruit...' />
+        <Select.Content>
+          <SelectItem value='apple'>Apple</SelectItem>
+          <SelectItem value='banana'>Banana</SelectItem>
+          <SelectItem value='blueberry'>Blueberry</SelectItem>
+          <SelectItem value='grapes'>Grapes</SelectItem>
+          <SelectItem value='pineapple'>Pineapple</SelectItem>
+        </Select.Content>
+      </Select>
       <button className='absolute bottom-3 right-4 h-6 w-7 rounded-[5px] flex justify-center items-center hover:bg-[rgba(255,255,255,0.2)] '>
         <svg
           width='15'
@@ -29,4 +34,4 @@ const Demo = () => {
   )
 }
 
-export default Demo
+export default SelectDemo

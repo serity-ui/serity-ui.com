@@ -12,10 +12,7 @@ const Sidebar = () => {
     {
       title: 'Getting Started',
       submenu: true,
-      submenuItems: [
-        { title: 'Installation', href: '/docs/installation' },
-        { title: 'Editor Setup', href: '/docs/editor-setup' },
-      ],
+      submenuItems: [{ title: 'Installation', href: '/docs/installation' }],
     },
     // {
     //   title: 'Core Concepts',
