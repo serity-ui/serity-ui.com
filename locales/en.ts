@@ -5,4 +5,11 @@ export default {
     'Rapidly build modern websites with easy-to-use React components',
   easy_to_setup:
     'Easy-to-setup React UI components to speed up your development and focus only on the things that matter',
+
+  // DOCS
+  // => General
+  import: 'Import',
+  // => Select
+  select_description:
+    'Select component is a component that allows users pick a value from predefined options.',
 }
