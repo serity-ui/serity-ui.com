@@ -8,7 +8,15 @@ export default {
   // DOCS
   // => General
   import: 'Importar',
+  usage: 'Uso',
+  examples: 'Ejemplos',
+  placement: 'Colocación',
+
   // => Select
   select_description:
     'Select es un componente que permite a los usuarios elegir un valor de las opciones predefinidas.',
+
+  // => Tooltip
+  tooltip_description:
+    'Un Tooltip es un mensaje breve e informativo que aparece cuando un usuario interactúa con un elemento.',
 }

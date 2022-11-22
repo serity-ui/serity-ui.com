@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import Import from '../../../components/blockcodes/ImportBlockCode'
+import ImportBlockCode from '../../../components/blockcodes/ImportBlockCode'
+import SelectWithPropsTheme from '../../../components/blockcodes/select/SelectWithPropsTheme'
 import SelectDemo from '../../../components/demos/SelectDemo'
 import Header from '../../../components/Header'
 import Heading from '../../../components/heading/Heading'
@@ -18,14 +19,19 @@ const select = () => {
       <Header title='Select' description={t.select_description} />
       <section className='relative'>
         <SelectDemo />
-        <br />
-        <br />
       </section>
-      <section>
-        <div>
-          <Heading>{t.import}</Heading>
-        </div>
-        <Import component='Select' />
+      <section className='mt-10'>
+        <Heading>{t.import}</Heading>
+        <ImportBlockCode component='Select' />
+      </section>
+      <section className='mt-10'>
+        <Heading>{t.examples}</Heading>
+        <Heading as='h3'>With theme prop</Heading>
+        <p>
+          You can either pass the prop <code>theme</code> with either the valie
+          light or 'dark
+        </p>
+        <SelectWithPropsTheme />
       </section>
     </Layout>
   )

@@ -1,61 +1,50 @@
 import React from 'react'
+import { useRouter } from 'next/router'
+
 import Import from '../../../components/blockcodes/ImportBlockCode'
 import TooltipBlockCode from '../../../components/blockcodes/tooltip/TooltipBlockCode'
 import TooltipSingleDemo from '../../../components/blockcodes/tooltip/TooltipSingleDemo'
 import Demo from '../../../components/Demo'
 import Header from '../../../components/Header'
 import Layout from '../../../components/Layout'
+import en from '../../../locales/en'
+import es from '../../../locales/es'
+import Heading from '../../../components/heading/Heading'
 
 const tooltip = () => {
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === 'en' ? en : es
+
   return (
     <Layout>
-      <Header
-        title='Tooltip'
-        description='A tooltip is a brief, informative message that appears when a user interacts with an element.'
-      />
-      <section className='relative'>
+      <Header title='Tooltip' description={t.tooltip_description} />
+      <section className='mt-10'>
         <Demo />
-        <br />
-        <br />
-        <div>
-          <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3'>
-            Import
-          </h2>
-        </div>
+      </section>
+      <section className='mt-10'>
+        <Heading>{t.import}</Heading>
         <Import component='Tooltip' />
-        <br />
-        <br />
-        <div>
-          <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3'>
-            Usage
-          </h2>
-          <br />
-          <h3 className='text-slate-200 text-lg tracking-tight font-bold mb-3'>
-            Tooltip with command props
-          </h3>
-        </div>
+      </section>
+      <section className='mt-10'>
+        <Heading>{t.usage}</Heading>
+      </section>
+      <section className='mt-5'>
+        <Heading as='h3'>Tooltip with command props</Heading>
         <TooltipSingleDemo type='button' />
         <TooltipBlockCode
           type='button'
           label={'Hey, I am a tooltip'}
           command='Ctrl + B'
         />
-        <br />
-        <br />
-        <div>
-          <h3 className='text-slate-200 text-lg tracking-tight font-bold mb-3'>
-            With an icon
-          </h3>
-        </div>
+      </section>
+      <section className='mt-10'>
+        <Heading as='h3'>With an icon</Heading>
         <TooltipSingleDemo type='icon' />
         <TooltipBlockCode type='icon' label={'Hey, I am a tooltip'} />
-        <br />
-        <br />
-        <div>
-          <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3'>
-            Placement
-          </h2>
-        </div>
+      </section>
+      <section className='mt-10'>
+        <Heading>{t.placement}</Heading>
       </section>
     </Layout>
   )
