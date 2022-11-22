@@ -9,7 +9,14 @@ export default {
   // DOCS
   // => General
   import: 'Import',
+  usage: 'Usage',
+  examples: 'Examples',
+  placement: 'Placement',
   // => Select
   select_description:
     'Select component is a component that allows users pick a value from predefined options.',
+
+  // => Tooltip
+  tooltip_description:
+    'A tooltip is a brief, informative message that appears when a user interacts with an element.',
 }
