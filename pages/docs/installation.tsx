@@ -4,51 +4,45 @@ import UsageBlockCode from '../../components/blockcodes/UsageBlockCode'
 import InstallationBlockCode from '../../components/blockcodes/InstallationBlockCode'
 import Link from 'next/link'
 import Header from '../../components/Header'
+import Heading from '../../components/heading/Heading'
+import { useRouter } from 'next/router'
+import en from '../../locales/en'
+import es from '../../locales/es'
 
 const installation = () => {
+  const router = useRouter()
+  const { locale } = router
+  const t = locale === 'en' ? en : es
+
   return (
     <Layout>
       <Header
-        title='Get started with Serity UI'
+        title={t.get_started_with_serity_ui}
         description='Serity UI is a simple, modular and accessible component library that
           gives you ready-to-use React components.'
       />
-      <section className='relative'>
-        <div>
-          <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3'>
-            Installation
-          </h2>
-        </div>
-        <div className='relative z-10 max-w-3xl mb-6'>
-          <p className='text-slate-200'>
-            To use Serity UI in your project, run the following command in your
-            terminal:
-          </p>
-        </div>
+      <section className='relative z-10 max-w-3xl mb-6'>
+        <Heading>{t.installation}</Heading>
+        <p className='text-slate-700 dark:text-slate-200'>
+          To use Serity UI in your project, run the following command in your
+          terminal:
+        </p>
         <InstallationBlockCode />
-        <div>
-          <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3 mt-10'>
-            Usage
-          </h2>
-        </div>
-        <div className='relative z-10 max-w-3xl mb-6'>
-          <p className='text-slate-200'>
-            After installing Serity UI, you can start importing the components
-            you want to use in your React project. In this example we are going
-            to use the <code className='text-purple-300'>Tooltip</code>{' '}
-            component.
-          </p>
-        </div>
+      </section>
+      <section className='relative z-10 max-w-3xl mb-6'>
+        <Heading>{t.usage}</Heading>
+        <p className='text-slate-700 dark:text-slate-200'>
+          After installing Serity UI, you can start importing the components you
+          want to use in your React project. In this example we are going to use
+          the <code className='text-purple-300'>Tooltip</code> component.
+        </p>
         <UsageBlockCode />
       </section>
       <section className='relative'>
-        <div>
-          <h2 className='text-slate-200 text-xl tracking-tight font-bold mb-3 mt-10'>
-            Framework Guide
-          </h2>
-        </div>
+        <Heading>Framework Guide</Heading>
+
         <div className='relative z-10 max-w-3xl mb-6'>
-          <p className='text-slate-400'>
+          <p className='text-slate-700 dark:text-slate-400'>
             Framework-specific guides that cover our recommended approach to
             installing Serity UI.
           </p>

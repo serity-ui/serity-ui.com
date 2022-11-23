@@ -7,10 +7,15 @@ export default {
     'Componentes de React fáciles de configurar para acelerar tu desarrollo y concentrarte solo en las cosas que importan',
   // DOCS
   // => General
+  installation: 'Instalación',
   import: 'Importar',
   usage: 'Uso',
   examples: 'Ejemplos',
   placement: 'Colocación',
+  framework_guide: 'Guía para Frameworks',
+
+  // => installation
+  get_started_with_serity_ui: 'Comience con Serity UI',
 
   // => Select
   select_description:
