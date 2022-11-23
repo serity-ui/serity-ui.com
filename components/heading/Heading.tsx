@@ -9,17 +9,17 @@ interface HeadingProps {
 
 const Heading = ({ children, className, as = 'h2' }: HeadingProps) => {
   const classNameH1 = twMerge(
-    'text-3xl sm:text-4x1 font-extrabold text-slate-200 tracking-tight',
+    'text-slate-700 dark:text-slate-200 text-3xl sm:text-4x1 font-extrabold tracking-tight',
     className,
   )
 
   const classNameH2 = twMerge(
-    'text-slate-200 text-2xl tracking-tight font-bold mb-3',
+    'text-slate-700 dark:text-slate-200 text-2xl tracking-tight font-bold mb-3',
     className,
   )
 
   const classNameH3 = twMerge(
-    'text-slate-200 text-xl tracking-tight font-semibold mb-3',
+    'text-slate-700 dark:text-slate-200 text-xl tracking-tight font-semibold mb-3',
     className,
   )
 

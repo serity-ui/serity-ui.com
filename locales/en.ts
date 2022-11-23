@@ -8,10 +8,16 @@ export default {
 
   // DOCS
   // => General
+  installation: 'Installation',
   import: 'Import',
   usage: 'Usage',
   examples: 'Examples',
   placement: 'Placement',
+  framework_guide: 'Framework Guide',
+
+  // => installation
+  get_started_with_serity_ui: 'Comience con Serity UI',
+
   // => Select
   select_description:
     'Select component is a component that allows users pick a value from predefined options.',

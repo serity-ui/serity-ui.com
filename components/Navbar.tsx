@@ -4,8 +4,9 @@ import { useState } from 'react'
 import Logo from '../public/logo.svg'
 import { useRouter } from 'next/router'
 import { AiFillGithub } from 'react-icons/ai'
-import { BsMoonFill } from 'react-icons/bs'
+import { BsFillSunFill, BsMoonFill } from 'react-icons/bs'
 import { HiDotsVertical } from 'react-icons/hi'
+import { useTheme } from 'next-themes'
 
 import en from '../locales/en'
 import es from '../locales/es'
@@ -15,6 +16,7 @@ const Navbar = () => {
   const { locale } = router
   const t = locale === 'en' ? en : es
   const [open, setOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   const changeLanguage = (e: any) => {
     const locale = e.target.value
@@ -41,7 +43,7 @@ const Navbar = () => {
           <ul className='lg:flex lg:gap-7'>
             <li>
               <Link
-                className='text-white block hover:text-[rgba(56,189,248,1)]'
+                className='text-slate-700 dark:text-white  block hover:text-[rgba(56,189,248,1)]'
                 href='/docs/installation/'
               >
                 Docs
@@ -49,8 +51,8 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className='text-white block hover:text-[rgba(56,189,248,1)]'
-                href='https://github.com/edman-cota/serity-ui.com'
+                className='text-slate-700 dark:text-white  block hover:text-[rgba(56,189,248,1)]'
+                href='/docs/components/select'
               >
                 {t.components}
               </Link>
@@ -58,7 +60,7 @@ const Navbar = () => {
             <div className='w-[1px] h-6 bg-slate-300'></div>
             <li>
               <select
-                className='bg-transparent text-white text-sm focus-visible:outline-none'
+                className='bg-transparent text-slate-700 dark:text-white  text-sm focus-visible:outline-none'
                 onChange={changeLanguage}
                 defaultValue={locale}
               >
@@ -71,16 +73,16 @@ const Navbar = () => {
               </select>
             </li>
             <li>
-              <Link
-                className='text-white flex items-center'
-                href='https://github.com/edman-cota/serity-ui.com'
+              <button
+                className='text-slate-700 dark:text-slate-200 flex items-center'
+                onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               >
-                <BsMoonFill />
-              </Link>
+                {theme === 'light' ? <BsMoonFill /> : <BsFillSunFill />}
+              </button>
             </li>
             <li>
               <Link
-                className='text-white flex items-center'
+                className='text-slate-700 dark:text-white flex items-center'
                 target='_blank'
                 href='https://github.com/serity-ui/serity-ui'
               >

@@ -64,19 +64,19 @@ const Sidebar = () => {
       <ul className='pt-2'>
         {Menus.map((menu, index) => (
           <li key={index} className='mt-12 lg:mt-8'>
-            <h5 className='mb-8 lg:mb-3 font-semibold text-slate-200'>
+            <h5 className='mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200'>
               {menu.title}
             </h5>
             {menu.submenu && (
-              <ul className='space-y-6 lg:space-y-2 border-l border-slate-800'>
+              <ul className='space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800'>
                 {menu.submenuItems.map((submenuItem, index) => (
                   <li key={index}>
                     <Link
                       href={submenuItem.href}
-                      className={`block border-l pl-4 -ml-px border-transparent  hover:text-slate-300 ${
+                      className={`block border-l pl-4 -ml-px border-transparent ${
                         router.asPath === submenuItem.href
                           ? 'text-sky-400 border-sky-400 hover:border-sky-400'
-                          : 'text-slate-400 hover:border-slate-500'
+                          : 'text-slate-700 dark:text-slate-400 hover:border-slate-400 dark:hover:border-slate-500'
                       } `}
                     >
                       {submenuItem.title}
