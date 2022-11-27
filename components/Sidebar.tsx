@@ -42,17 +42,7 @@ const Sidebar = () => {
   ]
   return (
     <aside className='hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-auto'>
-      <div className='flex justify-center mb-10'>
-        <Link href='/'>
-          <Image
-            className='text-white'
-            alt='Serity UI logo'
-            src={Logo}
-            width={26}
-            height={26}
-          />
-        </Link>
-      </div>
+      <div className='flex justify-center mb-10'></div>
       <div className='flex items-center rounded-md bg-slate-800 mt-6 px-4 py-2'>
         <BsSearch className='text-white text-lg block float-left cursor-pointer mr-2' />
         <input
