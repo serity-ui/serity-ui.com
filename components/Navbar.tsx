@@ -24,7 +24,7 @@ const Navbar = () => {
   }
 
   return (
-    <header className='h-16 w-full sticky top-0 left-0 z-[9997] backdrop-blur-lg backdrop-saturate-[180%] bg-[rgba(255,255,255,0.72)] dark:bg-[rgba(0,0,0,.72)]'>
+    <header className='h-16 w-full sticky top-0 left-0 z-[9997] border-b border-b-slate-200 dark:border-b-slate-900 backdrop-blur-lg backdrop-saturate-[180%] bg-[rgba(255,255,255,0.72)] dark:bg-[rgba(0,0,0,.72)]'>
       <div className='flex items-center justify-between h-full mx-auto flex-wrap px-7 w-11/12 max-w-[90rem]'>
         <Link href='/'>
           <Image

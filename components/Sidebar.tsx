@@ -43,12 +43,12 @@ const Sidebar = () => {
   return (
     <aside className='hidden lg:block fixed z-20 inset-0 top-[3.8125rem] left-[max(0px,calc(50%-45rem))] right-auto w-[19.5rem] pb-10 px-8 overflow-auto'>
       <div className='flex justify-center mb-10'></div>
-      <div className='flex items-center rounded-md bg-slate-800 mt-6 px-4 py-2'>
-        <BsSearch className='text-white text-lg block float-left cursor-pointer mr-2' />
+      <div className='flex items-center rounded-md bg-slate-200 dark:bg-slate-800 mt-6 px-4 py-2'>
+        <BsSearch className='text-slate-400 dark:text-white text-base block float-left cursor-pointer mr-3 ' />
         <input
           type={'search'}
           placeholder='Quick Search'
-          className='text-base bg-transparent w-full text-white focus:outline-none'
+          className='text-sm bg-transparent w-full text-slate-500 dark:text-white focus:outline-none'
         />
       </div>
       <ul className='pt-2'>

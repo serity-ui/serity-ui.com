@@ -17,7 +17,7 @@ const select = () => {
   return (
     <Layout>
       <Header title='Select' description={t.select_description} />
-      <section className='relative'>
+      <section>
         <SelectDemo />
       </section>
       <section className='mt-10'>

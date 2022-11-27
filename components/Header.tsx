@@ -1,4 +1,5 @@
 import Heading from './heading/Heading'
+import Text from './text/Text'
 
 interface Props {
   title: string
@@ -7,11 +8,9 @@ interface Props {
 
 const Header = ({ title, description }: Props) => {
   return (
-    <header className='flex flex-col mb-12 mt-16'>
+    <header className='flex flex-col mb-8 mt-16'>
       <Heading as='h1'>{title}</Heading>
-      <p className='mt-4 text-lg text-slate-700 dark:text-slate-200'>
-        {description}
-      </p>
+      <Text className='mt-4'>{description}</Text>
     </header>
   )
 }

@@ -19,14 +19,14 @@ const tooltip = () => {
   return (
     <Layout>
       <Header title='Tooltip' description={t.tooltip_description} />
-      <section className='mt-10'>
+      <section>
         <Demo />
       </section>
-      <section className='mt-10'>
+      <section className='mt-8'>
         <Heading>{t.import}</Heading>
         <Import component='Tooltip' />
       </section>
-      <section className='mt-10'>
+      <section className='mt-8'>
         <Heading>{t.usage}</Heading>
       </section>
       <section className='mt-5'>
