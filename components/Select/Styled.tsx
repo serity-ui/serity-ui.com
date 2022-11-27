@@ -41,6 +41,7 @@ export const List = styled.ul`
   position: absolute;
   top: 100%;
   left: 0;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 10px;
   -webkit-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
   transform-origin: 50% 0;
@@ -106,6 +107,7 @@ export const Container = styled.div`
   transition: all 0.4s ease-in-out;
   user-select: none;
   white-space: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 10px;
 
   &:before {
     ${(props) => {

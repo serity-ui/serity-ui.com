@@ -8,6 +8,7 @@ import Heading from '../../components/heading/Heading'
 import { useRouter } from 'next/router'
 import en from '../../locales/en'
 import es from '../../locales/es'
+import Text from '../../components/text/Text'
 
 const installation = () => {
   const router = useRouter()
@@ -23,29 +24,29 @@ const installation = () => {
       />
       <section className='relative z-10 max-w-3xl mb-6'>
         <Heading>{t.installation}</Heading>
-        <p className='text-slate-700 dark:text-slate-200'>
+        <Text>
           To use Serity UI in your project, run the following command in your
           terminal:
-        </p>
+        </Text>
         <InstallationBlockCode />
       </section>
       <section className='relative z-10 max-w-3xl mb-6'>
         <Heading>{t.usage}</Heading>
-        <p className='text-slate-700 dark:text-slate-200'>
+        <Text>
           After installing Serity UI, you can start importing the components you
           want to use in your React project. In this example we are going to use
           the <code className='text-purple-300'>Tooltip</code> component.
-        </p>
+        </Text>
         <UsageBlockCode />
       </section>
       <section className='relative'>
         <Heading>Framework Guide</Heading>
 
         <div className='relative z-10 max-w-3xl mb-6'>
-          <p className='text-slate-700 dark:text-slate-400'>
+          <Text>
             Framework-specific guides that cover our recommended approach to
             installing Serity UI.
-          </p>
+          </Text>
         </div>
         <ul className='grid grid-cols-1 gap-x-6 gap-y-10 mt-8 sm:grid-cols-2 xl:grid-cols-3'>
           <li className='relative flex flex-row-reverse'>
@@ -71,9 +72,9 @@ const installation = () => {
                   </svg>
                 </Link>
               </h4>
-              <p className='text-sm leading-6 text-slate-400'>
-                Full-featured React framework wihth great developer experience.
-              </p>
+              <Text>
+                Full-featured React framework with great developer experience.
+              </Text>
             </div>
             <div className='flex-none w-14 h-14 rounded-full ring-1 ring-slate-900/5 shadow flex-items-center justify-center overflow-hidden bg-slate-800 highlight-white/5'></div>
             <div className='absolute -z-10 -inset-3 rounded-2xl bg-slate-800/50 opacity-0 peer-hover:opacity-100'></div>
