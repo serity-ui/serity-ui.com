@@ -24,16 +24,17 @@ const Navbar = () => {
   }
 
   return (
-    <header className='h-16 w-11/12 mx-auto rounded-lg bg-white/[0.15]'>
-      <div className='flex items-center justify-between h-full px-7 flex-wrap w-full'>
-        <Image
-          className='text-white'
-          alt='Serity UI logo'
-          src={Logo}
-          width={26}
-          height={26}
-        />
-
+    <header className='h-16 w-full sticky top-0 left-0 z-[9997] backdrop-blur-lg backdrop-saturate-[180%] bg-[rgba(255,255,255,0.72)] dark:bg-[rgba(0,0,0,.72)]'>
+      <div className='flex items-center justify-between h-full mx-auto flex-wrap px-7 w-11/12 max-w-[90rem]'>
+        <Link href='/'>
+          <Image
+            className='text-white'
+            alt='Serity UI logo'
+            src={Logo}
+            width={26}
+            height={26}
+          />
+        </Link>
         <HiDotsVertical
           className='lg:hidden block h-5 w-5 cursor-pointer text-white'
           onClick={() => setOpen(!open)}
@@ -43,7 +44,7 @@ const Navbar = () => {
           <ul className='lg:flex lg:gap-7'>
             <li>
               <Link
-                className='text-slate-700 dark:text-white  block hover:text-[rgba(56,189,248,1)]'
+                className='text-[rgba(0,0,0,0.88)] dark:text-white  block hover:text-[rgba(56,189,248,1)]'
                 href='/docs/installation/'
               >
                 Docs
@@ -57,7 +58,7 @@ const Navbar = () => {
                 {t.components}
               </Link>
             </li>
-            <div className='w-[1px] h-6 bg-slate-300'></div>
+            <div className='w-[1px] h-6 bg-slate-400'></div>
             <li>
               <select
                 className='bg-transparent text-slate-700 dark:text-white  text-sm focus-visible:outline-none'
@@ -72,17 +73,17 @@ const Navbar = () => {
                 </option>
               </select>
             </li>
-            <li>
+            <li className='flex items-center'>
               <button
-                className='text-slate-700 dark:text-slate-200 flex items-center'
+                className='text-slate-700 dark:text-slate-200'
                 onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               >
                 {theme === 'light' ? <BsMoonFill /> : <BsFillSunFill />}
               </button>
             </li>
-            <li>
+            <li className='flex items-center'>
               <Link
-                className='text-slate-700 dark:text-white flex items-center'
+                className='text-slate-700 dark:text-white'
                 target='_blank'
                 href='https://github.com/serity-ui/serity-ui'
               >
