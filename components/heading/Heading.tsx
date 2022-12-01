@@ -14,7 +14,7 @@ const Heading = ({ children, className, as = 'h2' }: HeadingProps) => {
   )
 
   const classNameH2 = twMerge(
-    'text-slate-800 dark:text-slate-200 text-2xl tracking-tight font-semibold mb-3',
+    'text-slate-800 dark:text-slate-200 text-2xl tracking-tight font-semibold my-4',
     className,
   )
 

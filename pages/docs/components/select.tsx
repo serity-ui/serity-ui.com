@@ -16,7 +16,9 @@ const select = () => {
 
   return (
     <Layout>
-      <Header title='Select' description={t.select_description} />
+      <section>
+        <Header title='Select' description={t.select_description} />
+      </section>
       <section>
         <SelectDemo />
       </section>
@@ -25,11 +27,12 @@ const select = () => {
         <ImportBlockCode component='Select' />
       </section>
       <section className='mt-10'>
-        <Heading>{t.examples}</Heading>
+        <Heading className='mb-6'>{t.examples}</Heading>
         <Heading as='h3'>With theme prop</Heading>
-        <p>
-          You can either pass the prop <code>theme</code> with either the valie
-          light or 'dark
+        <p className='text-color-primary-800 dark:text-slate-200 mb-2'>
+          You can either pass the prop{' '}
+          <code className='text-purple-400'>theme</code> with either the value
+          light or dark
         </p>
         <SelectWithPropsTheme />
       </section>

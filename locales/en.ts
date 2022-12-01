@@ -5,6 +5,10 @@ export default {
     'Rapidly build modern websites with easy-to-use React components',
   easy_to_setup:
     'Easy-to-setup React UI components to speed up your development and focus only on the things that matter',
+  is_a_simple_modular_component:
+    'Serity UI is a simple, modular and accessible component library that gives you ready-to-use React components.',
+  to_use_serity_ui_in_your_project:
+    'Serity UI es una biblioteca de componentes simple, modular y accesible que le brinda componentes React listos para usar.',
 
   // DOCS
   // => General

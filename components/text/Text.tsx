@@ -8,7 +8,7 @@ interface TextProps {
 
 const Text = ({ className, children }: TextProps) => {
   const classNameP = twMerge(
-    'text-[rgba(0,0,0,0.8)] dark:text-slate-200 mb-3',
+    'text-color-primary-800 dark:text-slate-200 mb-3',
     className,
   )
 
