@@ -33,7 +33,6 @@ export default function Select({ children, theme = 'light' }: Props) {
 
 Select.Trigger = function SelectTrigger({ value, placeholder }: TriggerProps) {
   const { theme, select } = useContext(SelectContext)
-  console.log(select)
   let valor = value
   if (select !== '') {
     valor = select

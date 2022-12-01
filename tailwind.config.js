@@ -21,6 +21,8 @@ module.exports = {
         'code-library': 'rgb(195,232,141)',
         'code-comment': '#9ca3af',
         'code-block': '#1E293B',
+
+        'color-primary-800': 'rgba(0,0,0,0.8)',
       },
     },
     fontFamily: {
