@@ -1,27 +1,37 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useRef } from 'react'
 import { Container, Input, List, ListItem } from './Styled'
 
-interface Props {
-  children: any
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode
+  style?: React.CSSProperties
   value?: string
   theme?: string
+  width?: number
+  onValueChange?: (value: string) => void
 }
 
 interface TriggerProps {
   value?: string
-  placeholder: string
+  placeholder?: string
 }
 
 const SelectContext = createContext<any>('')
 
-export default function Select({ children, theme = 'light' }: Props) {
+export default function Select({
+  children,
+  theme = 'light',
+  width = 200,
+  onValueChange,
+}: Props) {
   const [toggle, setToggle] = useState(false)
   const [select, setSelect] = useState<string>('')
-
   return (
-    <SelectContext.Provider value={{ theme, select, toggle, setSelect }}>
+    <SelectContext.Provider
+      value={{ theme, width, select, toggle, setSelect, onValueChange }}
+    >
       <Container
         theme={theme}
+        width={width}
         className={` ${toggle ? 'active' : ''}`}
         onClick={() => setToggle(!toggle)}
       >
@@ -38,29 +48,32 @@ Select.Trigger = function SelectTrigger({ value, placeholder }: TriggerProps) {
     valor = select
   }
   return (
-    <Input
-      theme={theme}
-      type='text'
-      placeholder={placeholder}
-      value={valor}
-      readOnly
-    />
+    <Input theme={theme} placeholder={placeholder} value={valor} readOnly />
   )
 }
 
 Select.Content = function SelectContent({ children }: Props) {
-  const { theme, toggle } = useContext(SelectContext)
+  const { theme, width, toggle } = useContext(SelectContext)
   return (
-    <List theme={theme} className={` ${toggle ? 'active' : ''}`}>
+    <List theme={theme} width={width} className={` ${toggle ? 'active' : ''}`}>
       {children}
     </List>
   )
 }
 
 export const SelectItem = ({ children, value }: Props) => {
-  const { theme, setSelect } = useContext(SelectContext)
+  const { theme, setSelect, onValueChange } = useContext(SelectContext)
+  const elementRef = useRef(null)
+
+  const handleOnClick = (e) => {
+    if (typeof onValueChange === 'function') {
+      onValueChange(value)
+    }
+    setSelect(e.target.innerHTML)
+  }
+
   return (
-    <ListItem theme={theme} onClick={() => setSelect(value)}>
+    <ListItem ref={elementRef} theme={theme} onClick={(e) => handleOnClick(e)}>
       {children}
     </ListItem>
   )
