@@ -65,7 +65,7 @@ export const SelectItem = ({ children, value }: Props) => {
   const { theme, setSelect, onValueChange } = useContext(SelectContext)
   const elementRef = useRef(null)
 
-  const handleOnClick = (e) => {
+  const handleOnClick = (e: any) => {
     if (typeof onValueChange === 'function') {
       onValueChange(value)
     }
