@@ -5,7 +5,7 @@ const SelectDemo = () => {
   return (
     <div className='relative flex justify-center py-24 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500'>
       <Select theme='light'>
-        <Select.Trigger placeholder='Select a fruit...' />
+        <Select.Trigger value='Apple' placeholder='Select a fruit...' />
         <Select.Content>
           <SelectItem value='apple'>Apple</SelectItem>
           <SelectItem value='banana'>Banana</SelectItem>
